@@ -31,16 +31,13 @@ Además, este proyecto está desarrollado con las siguientes versiones de las he
     cd desafio-amplifica-v2
     ```
 ### Instlación de dependencias y preparación de entorno
-1. **Archivo .env**
-
-    Renombrar archivo .env.example a .env para tener configurado el entorno de desarrollo del proyecto
-2. **Instalación de paquetes**
+1. **Instalación de paquetes**
 
     ```bash
     npm install
     composer install
     ```
-3. **Nota**
+2. **Nota**
     
     Solo en caso de ser necesario correr en comando
     ```bash
@@ -64,6 +61,14 @@ Además, este proyecto está desarrollado con las siguientes versiones de las he
 3. **Pedidos**
 
     No hay registro de pedidos por tanto he de revisar la logica con la que se hace la petición.
+
+4. **Pruebas Unitarias**
+
+    Existe un registro de pruebas unitarias que fue generado por la libreria Breeze. Por tanto al ejecutar el comando de pruebas unitarias puede que aparesca que se ejecutaraon muchos testeos en contraste a los que se mencionan en la sección de pruebas unitarias.
+
+5. **env**
+
+    Si desea probar en su totalida requiere el archivo con las credenciales, contactar con el desarrollador por via email: efuentealba038@gmail.com, para solicitar una copia de .env.
 
 ### Comandos de apertura
 1. **Abrir teminal**
@@ -117,6 +122,33 @@ Además, este proyecto está desarrollado con las siguientes versiones de las he
 ## Pruebas unitarias
 
 
-1.**Ejecucion de pruebas**
+1. **Ejecucion de pruebas**
+    
+    - Usar el comando (En linux se ejuta de esta forma)
+     
+        ```bash
+        ./vendor/bin/phpunit
+        ```
 
+   - En caso de querer ejecutar las pruebas por archivo puede usar los siguientes comandos
+    
+        ```bash
+        ./vendor/bin/phpunit tests/Unit/Services/ShopifyServiceTest.php
+        ```
+        ```bash
+        ./vendor/bin/phpunit tests/Unit/Exports/ProductsExportTest.php
+        ```
+        ```bash
+        ./vendor/bin/phpunit tests/Unit/Services/ShopifyServiceTest.php
+        ```
 
+    - En caso de querer probar metodo unicamente utilizar el comando
+
+        ```bash
+        ./vendor/bin/phpunit --filter nombre_del_metodo
+        ``` 
+        Ejemplo
+
+        ```bash
+        ./vendor/bin/phpunit --filter test_index_displays_products_from_shopify
+        ```
