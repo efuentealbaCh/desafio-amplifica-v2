@@ -23,18 +23,13 @@ Además, este proyecto está desarrollado con las siguientes versiones de las he
    Ejecuta el siguiente comando para clonar el repositorio en tu máquina local:
 
    ```bash
-   git clone https://github.com/efuentealbaCh/desafio-amplifica.git
+   git clone https://github.com/efuentealbaCh/desafio-amplifica-v2.git
    ```
 2. **Accder al directorio**  
     Ejecutar el comando
     ```bash
-    cd desafio-amplifica
+    cd desafio-amplifica-v2
     ```
-3. **Cambio de rama**       
-   A continuación debemos de cambiarnos de rama usando el comando:
-    ```bash
-   git checkout amplifica-shopify
-   ```
 ### Instlación de dependencias y preparación de entorno
 1. **Archivo .env**
 
@@ -105,9 +100,8 @@ Además, este proyecto está desarrollado con las siguientes versiones de las he
     ```
 ### Probando el sistema
 
-    Dentro del sistema se puede probar navegando a travez de las barrar de navegación, cuando se concreta el el login, se nos redirecciona a la ventana de Producctos, se puede navegar usando la barra superio (navbar) para ver las diferentes funcionalidades solicitadas en la prueba.
-
-    Lo importante acá es como hacemos funcionar esto. Para ello cabe recalcar que toda la logica de extración de datos esta almacenada en el archivo ShopifyService.php que esta en la ruta app/Services/ShopifyService.php
+**Nota:**
+     Dentro del sistema se puede probar navegando a travez de las barrar de navegación, cuando se concreta el el login, se nos redirecciona a la ventana de Producctos, se puede navegar usando la barra superio (navbar) para ver las diferentes funcionalidades solicitadas en la prueba.Lo importante acá es como hacemos funcionar esto. Para ello cabe recalcar que toda la logica de extración de datos esta almacenada en el archivo ShopifyService.php que esta en la ruta app/Services/ShopifyService.php
 1. **Metodos importantes**
     
     - __constructor, este metodo se encarga de generar la intacia de cliente para poder hacer la petición inicial a la tienda en Shopify. Entre algunas de las cosas relevantes tenemos el manejo del dominio y las secret_key de mi tienda, asi como un tiempo de espera máximo para la respuesta de la app
