@@ -175,5 +175,3 @@ En la imagen se puede apreciar la vista de los pedidos disponibles en la tienda,
   ```
 
 ---
-
-✨ Con esto ya tendrás corriendo la aplicación, lista para interactuar con Shopify y explorar todas las funcionalidades desarrolladas 🚀
