@@ -19,12 +19,8 @@ class OrderController extends Controller
     public function index()
     {
         $orders = $this->shopifyService->getOrders();
-        if ($orders === null) {
-            return redirect()->back();
-        }
-
         return view('orders.index', [
-            'orders' => $orders['orders'] != null ? $orders['orders'] : [],
+            'orders' => $orders != null ? $orders['orders'] : [],
         ]);
     }
 
