@@ -25,7 +25,7 @@ class DashboardController extends Controller
 
         $topSellingProductsData = $this->getTopSellingProductsData($orders);
 
-        $products = $this->shopifyService->getProducts()['products'];
+        $products = $this->shopifyService->getProducts()['products'] != null ? $this->shopifyService->getProducts()['products'] : [];
         $availableProductsData = $this->getAvailableProductsData($products);
 
         return view('dashboard', [
