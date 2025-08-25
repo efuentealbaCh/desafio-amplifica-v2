@@ -20,11 +20,7 @@ class ProductController extends Controller
     {
         $products = $this->shopifyService->getProducts();
 
-        if ($products === null) {
-            return redirect()->back();
-        }
-
-        $products = $products['products'] ?? [];
+        $products = $products != null ?  $products['products'] : [];
 
         return view('products.index', [
             'products' => $products,
