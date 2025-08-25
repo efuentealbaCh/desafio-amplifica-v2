@@ -24,7 +24,7 @@ class OrderController extends Controller
         }
 
         return view('orders.index', [
-            'orders' => $orders['orders'],
+            'orders' => $orders['orders'] != null ? $orders['orders'] : [],
         ]);
     }
 
